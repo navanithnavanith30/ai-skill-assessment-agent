@@ -31,7 +31,7 @@ logger = logging.getLogger(__name__)
 @dataclass
 class AgentConfig:
     # 👉 PASTE YOUR API KEY HERE: Replace the os.environ.get(...) with your actual key like "AIzaSy..."
-    api_key: Optional[str] = os.environ.get("GEMINI_API_KEY") or "AIzaSyDuX46zsOL2RtV_oZNZv3jFJJIRtuAd8kw"
+    api_key: Optional[str] = os.environ.get("GEMINI_API_KEY") or "ADD API KEY HERE"
     model_name: str = "gemini-2.5-flash"
     temperature: float = 0.7
 
