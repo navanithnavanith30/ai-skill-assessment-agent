@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Skill Assessment</title>
+    <!-- Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Background Animated Shapes -->
+    <div class="blob shape-1"></div>
+    <div class="blob shape-2"></div>
+    <div class="blob shape-3"></div>
+
+    <div class="app-container">
+        <!-- Sidebar Setup -->
+        <aside class="glass-panel sidebar">
+            <div class="header">
+                <h2>✨ Setup Profile</h2>
+                <p>Provide details to calibrate the AI evaluator.</p>
+            </div>
+            
+            <div class="input-group">
+                <label for="jd-input">Job Description</label>
+                <textarea id="jd-input" placeholder="Paste the required skills and responsibilities..."></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="resume-input">Your Resume</label>
+                <textarea id="resume-input" placeholder="Paste your candidate resume..."></textarea>
+            </div>
+
+            <div class="action-container">
+                <button id="start-btn" class="glow-on-hover">🚀 Start Assessment</button>
+                <div id="loader" class="hidden">
+                    Parsing Profile <div class="spinner"></div>
+                </div>
+            </div>
+            
+            <div class="credit">Powered by Gemini AI</div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="glass-panel chat-container">
+            <div class="chat-header">
+                <div>
+                    <h2>Live Interview Tracker</h2>
+                    <p class="subtitle">Complete the assessment step-by-step</p>
+                </div>
+                <div class="status-indicator">
+                    <span class="dot"></span> <span id="status-text">Evaluator Ready</span>
+                </div>
+            </div>
+
+            <div class="chat-history" id="chat-history">
+                <div class="message system intro-msg">
+                    <div class="msg-content markdown-body">
+                        Welcome to the Skill Assessment Platform!<br><br>
+                        👈 Please fill out your <b>Job Description</b> and <b>Resume</b> on the left, then click <b>Start Assessment</b>.
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-wrapper hidden" id="chat-controls">
+                <textarea id="user-msg" rows="1" placeholder="Type your answer here... (Press Shift+Enter for new line)" autofocus></textarea>
+                <button id="send-btn" class="send-button" title="Send (Enter)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
